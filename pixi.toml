@@ -1,0 +1,13 @@
+[workspace]
+authors = ["Alfred Simkin <alfred.simkin@gmail.com>"]
+channels = ["conda-forge", "bioconda"]
+name = "sanger_known_sites_vcf"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+snakemake = "snakemake -s filter_bqsr.smk -c 2"
+
+[dependencies]
+bcftools = ">=1.23,<2"
+htslib = ">=1.23,<2"
