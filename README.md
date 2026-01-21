@@ -40,11 +40,11 @@ downstream applications like gatk bqsr.
 
 # Future compatibility
 
-If the sanger institute comes out with
-a similar list of vcf files that need to be edited in the future, you will need
-to make three edits:
- - You may want to edit sanger_vcf_file_links.txt to point to new links
+If the sanger institute comes out with a similar list of vcf files that need to
+be edited in the future, you may need to make three edits:
+ - You will likely want to edit sanger_vcf_file_links.txt to point to new links,
+   or create a new text file with new links.
  - filter_bqsr.smk line 16 may need to be edited to point to an alternative text
-   file
- - You may need to edit the url_path variable in line 28 to use a different
-   url prefix.
+   file if you created one in the edit above.
+ - You will likely need to edit the url_path variable in line 28 to use a
+   different url prefix.
