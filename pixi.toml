@@ -6,8 +6,10 @@ platforms = ["linux-64"]
 version = "0.1.0"
 
 [tasks]
-filter_known_sites = "snakemake -s filter_bqsr.smk -c 2"
+filter_known_sites = "snakemake -s filter_bqsr.smk -c 2 --rerun-incomplete"
+unlock = "snakemake -s filter_bqsr.smk -c 2 --unlock"
 
 [dependencies]
 bcftools = ">=1.23,<2"
 htslib = ">=1.23,<2"
+snakemake = ">=9.15.0,<10"

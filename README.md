@@ -30,13 +30,23 @@ You can install pixi from the following website:
 https://pixi.prefix.dev/latest/installation/
 
 Once you have pixi installed, you can clone this repository and change directory
-into the cloned folder, then install the pixi environment with pixi install
+into the cloned folder, then install the pixi environment with
+```
+pixi install
+```
 
 # Running instructions
 
-You can run the pipeline with pixi run filter_known_sites. The final output file
-will be a file located in known_sites/known_sites.vcf.gz - you can use this in
-downstream applications like gatk bqsr.
+You can run the pipeline with
+```
+pixi run filter_known_sites.
+```
+The final output file will be a file located in known_sites/known_sites.vcf.gz.
+You can use this in downstream applications like gatk bqsr. If your directories
+become locked due to a crash during running, you can unlock them with
+```
+pixi run unlock
+```
 
 # Future compatibility
 
@@ -44,7 +54,7 @@ If the sanger institute comes out with a similar list of vcf files that need to
 be edited in the future, you may need to make three edits:
  - You will likely want to edit sanger_vcf_file_links.txt to point to new links,
    or create a new text file with new links.
- - filter_bqsr.smk line 16 may need to be edited to point to an alternative text
+ - filter_bqsr.smk line 15 may need to be edited to point to an alternative text
    file if you created one in the edit above.
  - You will likely need to edit the url_path variable in line 28 to use a
    different url prefix.
