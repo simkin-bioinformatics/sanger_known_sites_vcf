@@ -6,7 +6,7 @@ platforms = ["linux-64"]
 version = "0.1.0"
 
 [tasks]
-snakemake = "snakemake -s filter_bqsr.smk -c 2"
+filter_known_sites = "snakemake -s filter_bqsr.smk -c 2"
 
 [dependencies]
 bcftools = ">=1.23,<2"

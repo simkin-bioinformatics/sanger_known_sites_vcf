@@ -13,6 +13,7 @@ def parse_filter_files(url_paths):
 	return sorted(files)
 
 chroms=parse_filter_files(url_paths_file)
+url_paths_file='sanger_vcf_file_links.txt'
 
 rule all:
 	input:

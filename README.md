@@ -26,4 +26,25 @@ VCF of known variable sites in the genome.
 
 # Installation
 
+You can install pixi from the following website:
+https://pixi.prefix.dev/latest/installation/
+
+Once you have pixi installed, you can clone this repository and change directory
+into the cloned folder, then install the pixi environment with pixi install
+
 # Running instructions
+
+You can run the pipeline with pixi run filter_known_sites. The final output file
+will be a file located in known_sites/known_sites.vcf.gz - you can use this in
+downstream applications like gatk bqsr.
+
+# Future compatibility
+
+If the sanger institute comes out with
+a similar list of vcf files that need to be edited in the future, you will need
+to make three edits:
+ - You may want to edit sanger_vcf_file_links.txt to point to new links
+ - filter_bqsr.smk line 16 may need to be edited to point to an alternative text
+   file
+ - You may need to edit the url_path variable in line 28 to use a different
+   url prefix.
