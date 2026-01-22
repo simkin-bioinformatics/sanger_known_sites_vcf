@@ -37,6 +37,7 @@ for line_number, line in enumerate(gzip.open(unfiltered_vcf, mode='rt')):
 	if line.startswith('#CHROM'):
 		h_dict=get_header(split_line)
 		parsing=True
+		output_file.write('\t'.join(targets)+'\n')
 	if parsing:
 		if split_line[h_dict['FILTER']]=='PASS':
 			output_line=[]
